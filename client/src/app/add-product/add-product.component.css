@@ -1,0 +1,48 @@
+form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+  }
+  
+  mat-label {
+    font-weight: bold;
+  }
+  
+  .mat-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+.container{
+    max-height: 600px;
+    padding: 20px;
+}
