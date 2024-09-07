@@ -1,0 +1,8 @@
+<ng-container>
+  <div class="product-card" *ngFor="let fields of userDetailsFields">
+    <p *ngIf="fields != 'id' && fields != 'accountPassword'">
+      {{ fields }} : {{ userDetails[fields] }}
+    </p>
+  </div>
+  <a [routerLink]="['/account']">want to change password ?</a>
+</ng-container>

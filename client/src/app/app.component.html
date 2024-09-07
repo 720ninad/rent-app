@@ -1,0 +1,38 @@
+<nav>
+  <div class="navbar-content">
+    <div class="navbar-title-container">
+      <a class="title" [routerLink]="['']">Rent App</a>
+    </div>
+    <div class="navbar-links-container">
+      <ul class="navbar-links">
+        <li>
+          <a [routerLink]="['shop-dashboard']" routerLinkActive="active"
+            >My Shop</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['products']" routerLinkActive="active">Products</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="navbar-search-container">
+        <form>
+          <input type="search" placeholder="Search" />
+          <button type="submit"><mat-icon>search</mat-icon></button>
+        </form>
+      </div>
+      <div class="navbar-user-container" >
+        <mat-icon [matMenuTriggerFor]="menu">account_circle</mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="navigateToAccountPage()">
+            My Account
+          </button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

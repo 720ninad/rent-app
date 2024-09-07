@@ -1,0 +1,5 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-typography p,.mat-typography h3{
+    margin: unset;
+}

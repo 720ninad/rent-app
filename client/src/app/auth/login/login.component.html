@@ -1,0 +1,25 @@
+<div class="container">
+    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <h2 class="example-form-title">Login</h2>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="password" placeholder="Password" formControlName="accountPassword" required>
+            <mat-error *ngIf="loginForm.get('accountPassword')?.invalid && loginForm.get('accountPassword')?.touched">
+                Password is required
+            </mat-error>
+        </mat-form-field>
+
+        <div class="foot">
+            <button mat-button color="primary" (click)="forgotPassword()">Forgot Password</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+        </div>
+        <button mat-button color="primary" routerLink="/register">Create New Account</button>
+    </form>
+</div>

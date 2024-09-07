@@ -1,0 +1,50 @@
+<div class="container">
+    <form [formGroup]="productForm" (ngSubmit)="addNewProduct()">
+        <mat-form-field>
+          <mat-label>Product Name</mat-label>
+          <input matInput placeholder="Enter product name" formControlName="productName">
+          <mat-error *ngIf="productForm.get('productName')?.invalid && productForm.get('productName')?.touched">Product Name is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Product Type</mat-label>
+          <input matInput placeholder="Enter product type" formControlName="productType">
+          <mat-error *ngIf="productForm.get('productType')?.invalid && productForm.get('productType')?.touched">Product Type is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Product Condition</mat-label>
+          <input matInput placeholder="Enter product condition" formControlName="productCondition">
+          <mat-error *ngIf="productForm.get('productCondition')?.invalid && productForm.get('productCondition')?.touched">Product Condition is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Price</mat-label>
+          <input matInput  placeholder="Enter price" formControlName="price">
+          <mat-error *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">Price is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Original Purchased Date</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="originalPurchasedDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="productForm.get('originalPurchasedDate')?.invalid && productForm.get('originalPurchasedDate')?.touched">Original Purchased Date is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Original Purchasing Receipt No</mat-label>
+          <input matInput placeholder="Enter original purchasing receipt number" formControlName="originalPurchasingRecieptNo">
+          <mat-error *ngIf="productForm.get('originalPurchasingRecieptNo')?.invalid && productForm.get('originalPurchasingRecieptNo')?.touched">Receipt No is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Product Description</mat-label>
+          <textarea matInput placeholder="Enter product description" formControlName="productDescription"></textarea>
+          <mat-error *ngIf="productForm.get('productDescription')?.invalid && productForm.get('productDescription')?.touched">Product Description is required</mat-error>
+        </mat-form-field>
+      
+        <button mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">Submit</button>
+      </form>
+      
+</div>
