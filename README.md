@@ -44,7 +44,7 @@
 
     * Run the following command to run the react client
         ```bash
-        npm start
+        ng serve
         ```
 
 ---
